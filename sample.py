@@ -6,7 +6,7 @@ Window
     -set window color to black: configure(bg="black")
     -set window title: title("<app name>")
 Label:
-    -create a text label：Label(text="", foreground="white", background="red")
+    -create a text label：Label(text="", foreground="white", background="red,", font=("Arial Bold",20))
     -Add to window: pack()  --> pack() first then you can position the widget
     -Position a text label: place(x=,y=)
   
@@ -17,12 +17,24 @@ Text Input:
     -Position a text input: place(x=,y=)
 
 Button:
-    -create a button: Button(text="click me")
+    def clicked():
+        l1.config(text="button is clicked")
+    -create a button: Button(text="click me", command=clicked)
     -Add to window: pack()
     -Position a button: place(x=,y=)
 
-
+=======================================================
+  
 ComboBox:
+
+	combo=ttk.Combobox()
+	combo["value"]=("item1","item2","item3","item4","item5")
+	combo.current(3) # index 3 , 
+	combo.pack()
+	
+	
+	
+	
 
 CheckButton:
 
